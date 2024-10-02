@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -5,6 +7,9 @@ import ShimmerButton from "./ui/ShimmerButton";
 import { SparklesCore } from "./ui/Sparkles";
 
 const Hero = () => {
+  const handleScrollToAbout = () => {
+    document.getElementById("about-us")?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="pb-20 pt-36">
       <div>
@@ -34,9 +39,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mt-4 text-sm md:text-lg lg:text-2xl">Hello welcome to the official page of DJS Compute!</p>
-          <a href="/about">
-            <ShimmerButton title="About us" icon={undefined} position={""} />
-          </a>
+          
         </div>
 
         {/* Boxes around the description section */}
@@ -59,6 +62,9 @@ const Hero = () => {
             Data Engineering
           </div>
         </div>
+        <a href="#about-us">
+            <ShimmerButton title="About us" icon={undefined} position={""} handleClick={handleScrollToAbout} />
+          </a>
       </div>
     </div>
   );
