@@ -2,8 +2,12 @@ import Departments from "@/components/Departments";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { HoverEvent } from "@tsparticles/engine";
 import Image from "next/image";
-import { FaAnchor, FaHome, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaAnchor, FaHome,FaGithub,FaLinkedinIn,FaInstagram } from "react-icons/fa";
+import { RiTeamFill,RiCalendarEventFill } from "react-icons/ri";
+import { GoProjectRoadmap } from "react-icons/go";
+
 
 export default function Home() {
   return (
@@ -13,8 +17,8 @@ export default function Home() {
           navItems={[
             { name: "Home", link: "/", icon: <FaHome /> },
             { name: "Projects", link: "/projects", icon: <FaAnchor /> },
-            { name: "Events", link: "/events", icon: <FaHome /> },
-            { name: "Team", link: "/team", icon: <FaHome /> },
+            { name: "Events", link: "/events", icon: <RiCalendarEventFill /> },
+            { name: "Team", link: "/team", icon: <GoProjectRoadmap /> },
           ]}
         />
         <Hero />
