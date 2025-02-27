@@ -1,4 +1,4 @@
-Sure! Here’s the complete README file content in one block for easy copying:
+
 
 
 # DJS-Compute Official Website
